@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eevento.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Cadastro de Eventos</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__tittle">Crie e compartilhe seu evento.</h1>
+            <p class="header__text">O primeiro passo, é preencher esse formulário de inscrição.</p>
+        </div>
+    </header>
+    
+    <main class="main">
+        <form class="form">
+            <fieldset class="infos fieldset">
+                <h2 class="tittle">Informações do Evento</h2>
+                <!-- campo de título do evento -->
+                <div class="camp">
+                    <label for="event__tittle" class="label__tittle">Nome do evento<span class="parenthesis"> (mínimo 100 caracteres)</span></label>
+                    <input type="text" id="event__tittle" name="event__tittle" aria-label="Título do evento" placeholder="Digite o título do evento..." required>
+                </div>
+                <!-- campo de link para o evento -->
+                <div class="camp">
+                    <label for="event__link" class="label__tittle">Link de redes sociais<span class="parenthesis" aria-label="Link do evento">(comece com https://)</span></label>
+                    <input type="text" id="event__link" name="event__link" placeholder="Link 1">
+                </div>
+                <!-- campo de link para o evento -->
+                <div class="camp">
+                    <label for="event__link" class="label__tittle">Link de redes sociais<span class="parenthesis" aria-label="Link do evento">(comece com https://)</span></label>
+                    <input type="text" id="event__link" name="event__link" placeholder="Link 2">
+                </div>
+                <!-- WhatsApp -->
+                <div class="camp">
+                    <label for="whatsapp" class="label__tittle">Whatsapp para contato<span class="parenthesis" aria-label="Whatsapp para contato"> (somente números)</span></label>
+                    <input type="tel" id="whatsapp" name="whatsapp"  placeholder="Digite o número de WhatsApp.." required>
+                </div>
+                <!-- Extras -->
+                <div class="camp">
+                    <label for="extras" class="label__tittle">Descrição do evento<span class="parenthesis" aria-label="Informações extras"> </span></label>
+                    <textarea id="extras" name="extras" rows="10"  placeholder="Digite mais informações..."></textarea>
+                </div>
+                <!-- Categoria -->
+                
+                <div class="camp camp__select">
+                    <label for="area" class="label__tittle" >Categoria</label>
+                    <select name="categoria" id="categoria" aria-label="Categoria do evento">
+                        <option value="selecione" selected disabled>Categoria do evento</option>
+                        <option value="option-1">Acadêmico - Seminário/Jornada</option>
+                        <option value="option-2">Científico - Congresso/Simpósio</option>
+                        <option value="option-3">Curso - Workshop/Palestra</option>
+                        <option value="option-3">Entretenimento - Show/Festa</option>
+                        <option value="option-4">Religioso - Retiro/Encontro/Beneficente</option>
+                        <option value="option-5">Esportivo - Jogos/Torneios</option>
+                        <option value="option-6">Exibição - Feira/Exposição</option>
+                        <option value="option-7">Networking - Encontro/Meetup</option>
+                        <option value="option-7">Corporativo - Empresarial</option>
+                    </select>
+                </div>
+
+                <div class="camp camp__select">
+                    <label for="modalidade" class="label__tittle" >Área</label>
+                    <select name="categoria" id="categoria" aria-label="Área do evento">
+                        <option value="selecione" selected disabled>Área do evento</option>
+                        <option value="option-1">Educação</option>
+                        <option value="option-2">Medicina</option>
+                        <option value="option-3">Saúde e bem-estar</option>
+                        <option value="option-4">Direito</option>
+                        <option value="option-5">Agricultura, pesca e veterinária </option>
+                        <option value="option-6">Artes e humanidade</option>
+                        <option value="option-7">Religioso e Espiritualidade</option>
+                        <option value="option-8">Engenharias</option>
+                        <option value="option-9">Negócios e Administração </option>
+                        <option value="option-10">Empreendedorismo e inovação</option>
+                        <option value="option-11">Computação e Tecnologias da Informação  </option>
+                        <option value="option-12">Ciências sociais e jornalismo</option>
+
+                    </select>
+                </div>
+
+                <div class="camp camp__select">
+                    <label for="modalidade" class="label__tittle" >Modalidade</label>
+                    <select name="categoria" id="categoria" aria-label="Categoria do evento">
+                        <option value="selecione" selected disabled>Modalidade do evento</option>
+                        <option value="option-1">Híbrido</option>
+                        <option value="option-2">Online</option>
+                        <option value="option-3">Presencial</option>
+                       
+                    </select>
+                </div>
+                
+                <!-- campo de carga horaria -->
+                <div class="camp">
+                    <label for="event__tittle" class="label__tittle">Carga Horária<span class="parenthesis"> Carga horária ofertada</span></label>
+                    <input type="text" id="event__tittle" name="event__tittle" aria-label="Título do evento" placeholder="Digite o título do evento..." required>
+                </div>
+                
+                <!-- campo de valor da isncriçao -->
+                <div class="camp">
+                    <label for="event__tittle" class="label__tittle">Valor da inscrição no evento<span class="parenthesis"></span></label>
+                    <input type="text" id="event__tittle" name="event__tittle" aria-label="Título do evento" placeholder="Digite o título do evento..." required>
+                </div>
+                
+            <!-- DADOS DO ORGANIZADOR -->
+            </fieldset>
+            <fieldset class="privacy fieldset">
+                <h2 class="tittle">Dados do organizador</h2>
+                <!-- campo e-mail  -->
+                <div class="camp">
+                    <label for="nome" class="label__tittle">Nome<span class="parenthesis"> </span></label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." required>
+                </div>
+
+                <div class="camp">
+                    <label for="email" class="label__tittle">E-mail<span class="parenthesis"> (digite um e-mail válido)</span></label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail..." required>
+                </div>
+                
+                <div class="camp">
+                    <label for="telefone" class="label__tittle">Telefone<span class="parenthesis"> (digite um telefone válido)</span></label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone..." required>
+                </div>
+
+
+            </fieldset>
+            <fieldset class="dia__hora fieldset">
+                <h2 class="tittle">Dia e hora</h2>
+                <div class="dia__hora__container">
+                <!-- Data -->
+                <div class="camp">
+                    <label for="date" class="label__tittle">Data</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <!-- início -->
+                <div class="camp">
+                    <label for="inicial__hour" class="label__tittle">Inicio</label>
+                    <input type="time" id="inicial__hour" name="inicial__hour" required>
+                </div>
+                <!-- fim -->
+                <div class="camp">
+                    <label for="final__hour" class="label__tittle">Final</label>
+                    <input type="time" id="final__hour" name="final__hour" required>
+                </div>
+            </div>
+
+            <div class="dia__hora_final__container">
+                <!-- Data -->
+                <div class="camp">
+                    <label for="date" class="label__tittle">Data</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+               
+            </div>
+
+            </fieldset>
+            <div class="btn__container">
+                <button type="submit" class="btn">
+                    Salvar evento
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Usar a fonte presente no resto das telas */
+}
+
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --background-header-color: #000000;
+    --background-color: #D9D9D9;
+    --white: #FFFFFF;
+    --blue: #4344EE;
+    --dark-gray: #4E4958;
+    --light-grey: #C1BCCC;
+}
+
+.header {
+    background-image: url('./img/back1.jpg'); /* Caminho para a sua imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: white; /* Mantém o texto branco para contraste */
+    padding: 60px 0; /* Ajusta o padding conforme necessário */
+    justify-content: center;
+}
+
+.main,
+.header,
+.dia__hora__container,
+.btn__container {
+    display: flex;
+}
+
+.header__container {
+    flex-direction: column;
+    width: 44%;
+}
+
+.header__tittle,
+.header__text,
+.form,
+.camp__select select,
+.btn {
+    font-family: var(--primary-font);
+}
+
+.header__tittle { 
+    color: var(--white);
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.header__text {
+    color: var(--blue);
+    width: 20em;
+}
+
+.main {
+    justify-content: center;
+    background-color: var(--background-color);
+    height: 100%;
+}
+
+.form {
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 40%;
+    padding: 2em;
+    margin-bottom: 2em;
+    margin-top: -3em;
+    box-shadow: 5px 10px 10px var(--dark-gray);
+}
+
+.fieldset {
+    padding-bottom: 2em;
+}
+
+.tittle {
+    border-bottom: 1px solid var(--light-grey);
+    margin-bottom: .8em;
+}
+
+.infos, 
+.privacy, 
+.dia__hora {
+    border: 0;
+}
+
+.camp {
+    padding-bottom: 1em;
+}
+
+.camp input[type="text"],
+.camp input[type="email"],
+.camp input[type="password"],
+.camp input[type="tel"],
+.camp input[type="date"],
+.camp input[type="time"],
+.camp textarea,
+.camp__select select {
+    padding: 0.5em;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px; /* Arredondar os cantos */
+    display: block;
+    width: 70%; /* Definir a largura das caixas de texto e da caixa suspensa */
+}
+
+.camp input[type="telefone"] {
+    padding: 0.5em;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px; /* Arredondar os cantos */
+    display: block;
+    width: 70%; /* Definir a largura das caixas de texto e da caixa suspensa */
+}
+
+.camp textarea,
+.camp__select select {
+    width: 50%;
+}
+
+.camp input[type="date"],
+.camp input[type="time"] {
+    width: 100%; /* Definir a largura total */
+    padding: 0.75em; /* Aumentar o padding para tornar os campos maiores */
+    border: 1px solid var(--light-grey); /* Definir a cor da borda */
+    border-radius: 5px; /* Arredondar os cantos */
+    font-size: 1em; /* Aumentar o tamanho da fonte */
+    font-family: 'Poppins', sans-serif; /* Usar a fonte presente no resto das telas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra para um efeito mais bonito */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Adicionar transição para efeitos de foco */
+}
+
+.camp input[type="date"]:focus,
+.camp input[type="time"]:focus {
+    border-color: #4344EE; /* Alterar a cor da borda ao focar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Aumentar a sombra ao focar */
+    outline: none; /* Remover o outline padrão */
+}
+
+.label__tittle {
+    display: block;
+    margin-bottom: 0.2em;
+    color: var(--dark-gray);
+}
+
+.parenthesis {
+    color: var(--light-grey);
+    font-size: .8em;
+}
+
+.camp__check {
+    display: flex;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.privacy__check {
+    margin-right: 10px;
+}
+
+.dia__hora {
+    justify-content: space-between;
+}
+
+.dia__hora .camp {
+    margin-right: 1.5em;
+}
+
+.dia__hora input {
+    color: var(--dark-gray);
+}
+
+.btn__container {
+    justify-content: center;
+}
+
+.btn {
+    background-color: #4344EE;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Arredondar os cantos */
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; /* Usar a fonte presente no resto das telas */
+}
+.btn:hover {
+    background-color: #4344EE;
+    opacity: 0.8;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: var(--light-grey); 
+  font-style: normal; /* Remover o itálico */
+  font-size: 0.9em;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder,
+select:focus::placeholder {
+  color: transparent;
+}
+
+/* Estilos para telas maiores que 1024px */
+@media screen and (min-width: 1024px) {
+    .header__container {
+        width: 44%;
+    }
+
+    .form {
+        width: 40%;
+    }
+
+    .camp input[type="text"],
+    .camp input[type="email"],
+    .camp input[type="password"],
+    .camp textarea,
+    .camp input[type="tel"],
+    .camp input[type="date"],
+    .camp input[type="time"],
+    .camp__select select {
+        width: 70%;
+    }
+
+    .camp textarea,
+    .camp__select select {
+        width: 50%;
+    }
+}
+
+/* Estilos para telas menores ou iguais a 1024px */
+@media screen and (max-width: 1024px) {
+    .header__container {
+        width: 80%;
+    }
+
+    .form {
+        width: 70%;
+        justify-content: center;
+    }
+
+    .camp input[type="text"],
+    .camp input[type="email"],
+    .camp input[type="password"],
+    .camp textarea,
+    .camp input[type="tel"],
+    .camp__select select {
+        width: 100%;
+    }
+
+    .camp input[type="date"],
+    .camp input[type="time"],
+    .camp input[type="date"]
+    {
+        width: 50%;
+    }
+
+    .camp textarea,
+    .camp__select select {
+        width: 100%;
+    }
+
+    .dia__hora__container {
+        flex-direction: column;
+    }
+}
