@@ -1147,10 +1147,10 @@ textarea.input {
     background-color: #4344EE;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 14px 50px;
     border-radius: 5px; /* Arredondar os cantos */
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     cursor: pointer;
     font-family: 'Poppins', sans-serif; /* Usar a fonte presente no resto das telas */
 }
@@ -1159,6 +1159,7 @@ textarea.input {
     background-color: #4344EE;
     font-family: 'Poppins', sans-serif;
 }
+
 
 .dropdown {
     position: relative;
@@ -1196,6 +1197,7 @@ textarea.input {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif; /* Usar a fonte presente no resto das telas */
 }
 
@@ -1207,4 +1209,54 @@ textarea.input {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Estilo para alinhar o dropdown com as outras opções do nav-bar */
+.navbar-nav > li {
+    position: relative;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 255px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #ffffff00;
+    border: 1px solid #cccccc00;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.navbar-nav > li:hover > .dropdown-menu {
+    display: block;
+}
+
+.navbar-nav > li > .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.navbar-nav > li > .dropdown-menu > li > a:hover {
+    background-color: #4344EE;
+    color: #ffffff00;
+    min-width: 160px;
+}
+
+/* Remover fundo branco das opções do dropdown */
+.navbar-nav > li > .dropdown-menu > li > a {
+    background-color: transparent;
 }
