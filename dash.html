@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dasho.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Dashboard do Organizador</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__tittle">Dashboard do Organizador</h1>
+            <p class="header__text">Bem-vindo, organizador@exemplo.com!</p>
+        </div>
+    </header>
+    
+    <main class="main">
+        <!-- 1. Dashboard Resumo -->
+        <section class="section">
+            <h2 class="tittle"> Dashboard Resumo</h2>
+            <div class="dashboard__resumo">
+                <div class="card">
+                    <h3>Eventos Ativos</h3>
+                    <p>5</p>
+                </div>
+                <div class="card">
+                    <h3>Total de Inscritos</h3>
+                    <p>120</p>
+                </div>
+                <div class="card">
+                    <h3>Eventos Futuros</h3>
+                    <p>3</p>
+                </div>
+                <div class="card">
+                    <h3>Eventos Passados</h3>
+                    <p>2</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Gerenciamento de Eventos -->
+        <section class="section">
+            <h2 class="tittle"> Gerenciamento de Eventos</h2>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome do Evento</th>
+                        <th>Data e Horário</th>
+                        <th>Status</th>
+                        <th>Inscritos</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#">Evento 1</a></td>
+                        <td>25/03/2025 - 10h</td>
+                        <td>Ativo</td>
+                        <td>50</td>
+                        <td>
+                            <button> Editar</button>
+                            <button> Estatísticas</button>
+                            <button> Cancelar</button>
+                            <button> Copiar Link</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Evento 2</a></td>
+                        <td>30/03/2025 - 14h</td>
+                        <td>Rascunho</td>
+                        <td>0</td>
+                        <td>
+                            <button> Editar</button>
+                            <button> Estatísticas</button>
+                            <button> Cancelar</button>
+                            <button> Copiar Link</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 3. Gestão de Inscritos -->
+        <section class="section">
+            <h2 class="tittle"> Gestão de Inscritos</h2>
+            <div class="camp">
+                <input type="text" id="buscarInscrito" placeholder="Buscar inscrito por nome ou e-mail...">
+                <button> Buscar</button>
+            </div>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>Status</th>
+                        <th>Data de Inscrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>joao@exemplo.com</td>
+                        <td>(11) 99999-9999</td>
+                        <td>Confirmado</td>
+                        <td>20/03/2025</td>
+                        <td>
+                            <button> Confirmar</button>
+                            <button> Cancelar</button>
+                            <button> Enviar Mensagem</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button> Exportar Lista (CSV)</button>
+        </section>
+
+        <!-- 4. Relatórios e Estatísticas -->
+        <section class="section">
+            <h2 class="tittle"> Relatórios e Estatísticas</h2>
+            <div class="graficos">
+                <p>Gráficos de participação e feedback serão exibidos aqui.</p>
+            </div>
+        </section>
+
+        <!-- 5. Gestão de Pagamentos -->
+        <section class="section">
+            <h2 class="tittle"> Gestão de Pagamentos</h2>
+            <div class="resumo__financeiro">
+                <p>Total Arrecadado: R$ 1.500,00</p>
+                <p>Pagamentos Pendentes: R$ 300,00</p>
+            </div>
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Evento 1</td>
+                        <td>R$ 500,00</td>
+                        <td>Pago</td>
+                    </tr>
+                    <tr>
+                        <td>Evento 2</td>
+                        <td>R$ 300,00</td>
+                        <td>Pendente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 6. Configuração da Conta -->
+        <section class="section">
+            <h2 class="tittle"> Configuração da Conta</h2>
+            <div class="camp">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" value="Organizador Exemplo">
+            </div>
+            <div class="camp">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" value="organizador@exemplo.com">
+            </div>
+            <div class="camp">
+                <label for="senha">Alterar Senha</label>
+                <input type="password" id="senha" placeholder="Nova senha">
+            </div>
+            <button>Salvar Alterações</button>
+        </section>
+
+        <!-- 7. Suporte e Ajuda -->
+        <section class="section">
+            <h2 class="tittle"> Suporte e Ajuda</h2>
+            <div class="suporte">
+                <p><a href="#">FAQ</a></p>
+                <p><a href="#">Contato com Suporte</a></p>
+                <p><a href="#">Tutorial de Uso</a></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

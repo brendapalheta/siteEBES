@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="eevento.css">
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+        <title>Login do Organizador</title>
+    </head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__tittle">Login do Organizador</h1>
+            <p class="header__text">Acesse sua conta para gerenciar seus eventos.</p>
+        </div>
+    </header>
+    
+    <main class="main">
+        <form class="form" id="loginForm">
+           <!-- Campo de e-mail -->
+           <div class="camp">
+            <label for="email" class="label__tittle">E-mail<span class="parenthesis"> (Obrigatório)</span></label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail..." required>
+        </div>
+
+        <!-- Campo de senha -->
+        <div class="camp">
+            <label for="senha" class="label__tittle">Senha<span class="parenthesis"> (Obrigatório)</span></label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha..." required>
+        </div>
+
+            <!-- Link para recuperação de senha -->
+            <div class="camp">
+                <a href="recuperar-senha.html" class="link__senha">Esqueceu sua senha?</a>
+            </div>
+             <!-- Link para cadastro -->
+             <div class="camp text-center">
+                <p class="link__cadastro">Ainda não tem uma conta? <a href="cadorganizador.html">Cadastre-se aqui</a>.</p>
+            </div>
+
+           <!-- Botão de login -->
+            <div class="btn__container">
+                <button type="submit" class="btn">
+                    Entrar
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        // E-mail e senha válidos pré-definidos
+        const EMAIL_VALIDO = "organizador@exemplo.com";
+        const SENHA_VALIDA = "senha123";
+
+        // Função para validar o login
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            if (email === EMAIL_VALIDO && senha === SENHA_VALIDA) {
+                // Redireciona para a tela de dashboard
+                window.location.href = "dash.html";
+            } else {
+                alert("E-mail ou senha incorretos. Tente novamente.");
+            }
+        });
+    </script>
+</body>
+</html>

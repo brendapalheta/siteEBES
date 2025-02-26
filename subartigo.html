@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eevento.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Submissão de Artigo</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__tittle">Submeta seu artigo para o evento.</h1>
+            <p class="header__text">Compartilhe seu conhecimento e faça parte do nosso evento!</p>
+        </div>
+    </header>
+    
+    <main class="main">
+        <form class="form">
+            <fieldset class="infos fieldset">
+                <h2 class="tittle">Informações do Artigo</h2>
+
+                <!-- Nome do autor -->
+                <div class="camp">
+                    <label for="nome" class="label__tittle">Nome do autor<span class="parenthesis"> (nome completo)</span></label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." required>
+                </div>
+
+                <!-- E-mail -->
+                <div class="camp">
+                    <label for="email" class="label__tittle">E-mail<span class="parenthesis"> (digite um e-mail válido)</span></label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail..." required>
+                </div>
+
+                <!-- Telefone -->
+                <div class="camp">
+                    <label for="telefone" class="label__tittle">Telefone<span class="parenthesis"> (digite um telefone válido)</span></label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone..." required>
+                </div>
+
+                <!-- Submissão de arquivo em PDF -->
+                <div class="camp">
+                    <label for="arquivo" class="label__tittle">Submeter artigo<span class="parenthesis"> (somente arquivos PDF)</span></label>
+                    <input type="file" id="arquivo" name="arquivo" accept="application/pdf" required>
+                </div>
+
+                <!-- Área do artigo -->
+                <div class="camp camp__select">
+                    <label for="area" class="label__tittle">Área do artigo</label>
+                    <select name="area" id="area" aria-label="Área do artigo" required>
+                        <option value="selecione" selected disabled>Selecione a área do artigo</option>
+                        <option value="educacao">Educação</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="saude">Saúde e bem-estar</option>
+                        <option value="direito">Direito</option>
+                        <option value="agricultura">Agricultura, pesca e veterinária</option>
+                        <option value="artes">Artes e humanidade</option>
+                        <option value="religioso">Religioso e Espiritualidade</option>
+                        <option value="engenharias">Engenharias</option>
+                        <option value="negocios">Negócios e Administração</option>
+                        <option value="empreendedorismo">Empreendedorismo e inovação</option>
+                        <option value="computacao">Computação e Tecnologias da Informação</option>
+                        <option value="ciencias">Ciências sociais e jornalismo</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Botão de submissão -->
+            <div class="btn__container">
+                <button type="submit" class="btn">
+                    Submeter artigo
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+		document.querySelector('form').addEventListener('submit', function (event) {
+			const arquivo = document.getElementById('arquivo').files[0];
+			if (arquivo && arquivo.type !== 'application/pdf') {
+				alert('Por favor, envie um arquivo em formato PDF.');
+				event.preventDefault();
+			}
+		});
+		</script>
+</body>
+</html>

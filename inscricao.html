@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eevento.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Cadastro de Eventos</title>
+    <style>
+        /* ... (seu CSS anterior) ... */
+        .custom-select {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .select-items {
+            position: absolute;
+            z-index: 99;
+            width: 100%;
+            border: 1px solid #ddd;
+            background-color: white;
+            display: none;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .select-items div {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .select-items div:hover {
+            background-color: #f1f1f1;
+        }
+
+        .select-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .select-box:hover {
+            background-color: #f1f1f1;
+        }
+
+        .select-items input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__tittle">Faça a sua inscrição no EBES 2025.</h1>
+            <p class="header__text">O primeiro passo para garantir seu lugar no maior evento Engenharia de Software do Brasil.</p>
+        </div>
+    </header>
+    
+    <main class="main">
+        <form class="form">
+            <fieldset class="infos fieldset">
+                <h2 class="tittle">Dados pessoais</h2>
+
+                <div class="form-group">
+                    <label for="courses">Escolha seus Cursos</label>
+                    <div class="custom-select">
+                        <div class="select-box">Selecione seus Cursos</div>
+                        <div class="select-items">
+                            <div>
+                                <input type="checkbox" name="course" value="python" data-price="40"> Ciência de Dados com Python (R$ 40,00)
+                            </div>
+                            <div>
+                                <input type="checkbox" name="course" value="ia" data-price="50"> Introdução à Inteligência Artificial (R$ 50,00)
+                            </div>
+                            <div>
+                                <input type="checkbox" name="course" value="javascript" data-price="60"> Javascript (R$ 60,00)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <label for="total">Valor Total: R$ <span id="total">0.00</span></label>
+                </div>
+
+                <!-- campo de título do evento -->
+                <div class="camp">
+                    <label for="event__tittle" class="label__tittle">Nome completo<span class="parenthesis"> (mínimo 100 caracteres)</span></label>
+                    <input type="text" id="event__tittle" name="event__tittle" aria-label="Título do evento" placeholder="Digite seu nome completo..." required>
+                </div>
+                <!-- campo de email -->
+                <div class="camp">
+                    <label for="email" class="label__tittle">E-mail<span class="parenthesis"> (digite um e-mail válido)</span></label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail..." required>
+                </div>
+                <!-- campo de telefone -->
+                <div class="camp">
+                    <label for="telefone" class="label__tittle">Telefone<span class="parenthesis"> (digite um telefone válido)</span></label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone..." required>
+                </div>
+                <!-- WhatsApp -->
+                <div class="camp">
+                    <label for="whatsapp" class="label__tittle">Whatsapp para contato<span class="parenthesis" aria-label="Whatsapp para contato"> (somente números)</span></label>
+                    <input type="tel" id="whatsapp" name="whatsapp"  placeholder="Digite o número de WhatsApp.." required>
+                </div>
+               
+              
+
+                <div class="camp camp__select">
+                    <label for="modalidade" class="label__tittle" >Área</label>
+                    <select name="categoria" id="categoria" aria-label="Área do evento" multiple>
+                        <option value="selecione" disabled>Área do evento</option>
+                        <option value="option-1">Educação</option>
+                        <option value="option-2">Medicina</option>
+                        <option value="option-3">Saúde e bem-estar</option>
+                        <option value="option-4">Direito</option>
+                        <option value="option-5">Agricultura, pesca e veterinária </option>
+                        <option value="option-6">Artes e humanidade</option>
+                        <option value="option-7">Religioso e Espiritualidade</option>
+                        <option value="option-8">Engenharias</option>
+                        <option value="option-9">Negócios e Administração </option>
+                        <option value="option-10">Empreendedorismo e inovação</option>
+                        <option value="option-11">Computação e Tecnologias da Informação  </option>
+                        <option value="option-12">Ciências sociais e jornalismo</option>
+
+                    </select>
+                </div>
+
+                <div class="camp camp__select">
+                    <label for="modalidade" class="label__tittle" >Modalidade</label>
+                    <select name="categoria" id="categoria" aria-label="Categoria do evento">
+                        <option value="selecione" selected disabled>Modalidade do evento</option>
+                        <option value="option-1">Híbrido</option>
+                        <option value="option-2">Online</option>
+                        <option value="option-3">Presencial</option>
+                    </select>
+                </div>
+                
+                <!-- campo de carga horaria -->
+                <div class="camp">
+                    <label for="event__tittle" class="label__tittle">Carga Horária<span class="parenthesis"> Carga horária ofertada</span></label>
+                    <input type="text" id="event__tittle" name="event__tittle" aria-label="Título do evento" placeholder="Digite o título do evento..." required>
+                </div>
+                
+                <!-- campo de valor da isncriçao -->
+                <div class="camp">
+                    <label for="event__tittle" class="label__tittle">Valor da inscrição no evento<span class="parenthesis"></span></label>
+                    <input type="text" id="event__tittle" name="event__tittle" aria-label="Título do evento" placeholder="Digite o título do evento..." required>
+                </div>
+                
+            <!-- DADOS DO ORGANIZADOR -->
+            </fieldset>
+            <fieldset class="privacy fieldset">
+                <h2 class="tittle">Dados do organizador</h2>
+
+                <!-- campo e-mail  -->
+                <div class="camp">
+                    <label for="nome" class="label__tittle">Nome<span class="parenthesis"> </span></label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." required>
+                </div>
+
+                <div class="camp">
+                    <label for="email" class="label__tittle">E-mail<span class="parenthesis"> (digite um e-mail válido)</span></label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail..." required>
+                </div>
+
+                  <!-- Categoria -->
+                
+                  <div class="camp camp__select">
+                    <label for="area" class="label__tittle" >Categoria</label>
+                    <select name="categoria" id="categoria" aria-label="Categoria do evento">
+                        <option value="selecione" selected disabled>Categoria do evento</option>
+                        <option value="option-1">Acadêmico - Seminário/Jornada</option>
+                        <option value="option-2">Científico - Congresso/Simpósio</option>
+                        <option value="option-3">Curso - Workshop/Palestra</option>
+                        <option value="option-3">Entretenimento - Show/Festa</option>
+                        <option value="option-4">Religioso - Retiro/Encontro/Beneficente</option>
+                        <option value="option-5">Esportivo - Jogos/Torneios</option>
+                        <option value="option-6">Exibição - Feira/Exposição</option>
+                        <option value="option-7">Networking - Encontro/Meetup</option>
+                        <option value="option-7">Corporativo - Empresarial</option>
+                    </select>
+                </div>
+
+                
+                  <!-- modalidade -->
+                <div class="camp camp__select">
+                    <label for="modalidade" class="label__tittle">Modalidade</label>
+                    <div class="dropdown">
+                        <button class="dropbtn">Selecionar Modalidades</button>
+                        <div class="dropdown-content">
+                            <label><input type="checkbox" value="palestra" onchange="updateDescription()"> Somente palestras (R$ 75,00)</label>
+                            <label><input type="checkbox" value="palestra-minicursos-1" onchange="updateDescription()"> Desenvolvimento de aplicações web com frameworks modernos (R$ 35,00)</label>
+                            <label><input type="checkbox" value="palestra-minicursos-2" onchange="updateDescription()"> Arquitetura de software orientada a microsserviços (R$ 35,00)</label>
+                            <label><input type="checkbox" value="palestra-minicursos-3" onchange="updateDescription()"> Design de Interfaces e Experiência do Usuário (UI/UX) (R$ 35,00)</label>
+                            <label><input type="checkbox" value="palestra-minicursos-4" onchange="updateDescription()"> DevOps: Automatizando o ciclo de vida do software (R$ 35,00)</label>
+                            <label><input type="checkbox" value="palestra-minicursos-5" onchange="updateDescription()"> Desenvolvimento de Aplicações mobile multiplataforma com React Native (R$ 35,00)</label>
+                            <label><input type="checkbox" value="palestra-minicursos-6" onchange="updateDescription()"> Introdução a Desenvolvimento de Jogos Digitais com Unity (R$ 35,00)</label>
+                            <label><input type="checkbox" value="palestra-minicursos-7" onchange="updateDescription()"> Gerenciamento de Projetos de Software com Scrum (R$ 35,00)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="camp">
+                    <label for="telefone" class="label__tittle">Telefone<span class="parenthesis"> (digite um telefone válido)</span></label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone..." required>
+                </div>
+
+
+            </fieldset>
+            <fieldset class="dia__hora fieldset">
+                <h2 class="tittle">Dia e hora</h2>
+                <div class="dia__hora__container">
+                <!-- Data -->
+                <div class="camp">
+                    <label for="date" class="label__tittle">Data</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <!-- início -->
+                <div class="camp">
+                    <label for="inicial__hour" class="label__tittle">Inicio</label>
+                    <input type="time" id="inicial__hour" name="inicial__hour" required>
+                </div>
+                <!-- fim -->
+                <div class="camp">
+                    <label for="final__hour" class="label__tittle">Final</label>
+                    <input type="time" id="final__hour" name="final__hour" required>
+                </div>
+            </div>
+
+            <div class="dia__hora_final__container">
+                <!-- Data -->
+                <div class="camp">
+                    <label for="date" class="label__tittle">Data</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+               
+            </div>
+
+            </fieldset>
+            <div class="btn__container">
+                <button type="submit" class="btn">
+                    Salvar evento
+                </button>
+            </div>
+        </form>
+
+       
+    </main>
+    <script>
+        function updateTotal() {
+            let total = 0.00;
+            const selectedCourses = document.querySelectorAll('input[name="course"]:checked');
+            const selectedUserTypes = document.querySelectorAll('input[name="user-type"]:checked');
+
+            selectedCourses.forEach(course => {
+                total += parseFloat(course.getAttribute('data-price'));
+            });
+
+            selectedUserTypes.forEach(userType => {
+                total += parseFloat(userType.getAttribute('data-price'));
+            });
+
+            document.getElementById('total').innerText = total.toFixed(2);
+        }
+
+        const selectBoxes = document.querySelectorAll('.select-box');
+        selectBoxes.forEach(selectBox => {
+            selectBox.addEventListener('click', function(event) {
+                event.stopPropagation(); // Impede o evento de se propagar para o documento
+                const selectItems = this.nextElementSibling;
+                selectItems.style.display = selectItems.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Adiciona evento de clique aos checkboxes para atualizar o total
+        const checkboxes = document.querySelectorAll('input[name="course"], input[name="user-type"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateTotal);
+        });
+
+        // Fecha os comboboxes ao clicar fora deles
+        document.addEventListener('click', function() {
+            const selectItems = document.querySelectorAll('.select-items');
+            selectItems.forEach(item => {
+                item.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

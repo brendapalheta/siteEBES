@@ -1,0 +1,246 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --background-header-color: #000000;
+    --background-color: #ffffff;
+    --white: #FFFFFF;
+    --blue: #4344EE;
+    --dark-gray: #4E4958;
+    --light-grey: #C1BCCC;
+}
+
+.header {
+    background-image: url('./img/back1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 60px 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.header__tittle {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.header__text {
+    color: var(--blue);
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.main {
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+/* Seções do Dashboard */
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tittle {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--light-grey);
+    padding-bottom: 10px;
+}
+
+/* Cards do Dashboard Resumo */
+.dashboard__resumo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin: 0;
+}
+
+/* Tabelas */
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabela th, .tabela td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.tabela th {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 500;
+}
+
+.tabela tr:hover {
+    background-color: #f9f9f9;
+}
+
+.tabela button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.tabela button:hover {
+    background-color: #3333cc;
+}
+
+/* Busca de Inscritos */
+.camp {
+    margin-bottom: 20px;
+}
+
+.camp input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    font-family: var(--primary-font);
+}
+
+.camp button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.camp button:hover {
+    background-color: #3333cc;
+}
+
+/* Gráficos (Placeholder) */
+.graficos {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Resumo Financeiro */
+.resumo__financeiro {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.resumo__financeiro p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+}
+
+/* Configuração da Conta */
+.camp label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark-gray);
+}
+
+.camp input[type="text"],
+.camp input[type="email"],
+.camp input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    font-family: var(--primary-font);
+}
+
+.camp button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.camp button:hover {
+    background-color: #3333cc;
+}
+
+/* Suporte e Ajuda */
+.suporte {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suporte a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.suporte a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .dashboard__resumo {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .tabela th, .tabela td {
+        padding: 8px;
+    }
+
+    .camp input[type="text"] {
+        width: 100%;
+    }
+
+    .camp button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
