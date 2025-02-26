@@ -4,7 +4,925 @@
 	
 
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="ServerSide_SP | Arquitetura, disponibilidade e escalabilidade" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Quer conhecer e debater o melhor da tecnologia server side? Além de confraternizar e trocar experiências sobre o dia-a-dia?" />
+    <meta property="og:url" content="https://serversidesp.github.io/" />
+    <meta property="og:image" content="https://serversidesp.github.io/img/fb.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="ServerSide_SP | Arquitetura, disponibilidade e escalabilidade" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@serversidesp">
+    <meta name="twitter:title" content="ServerSide_SP | Arquitetura, disponibilidade e escalabilidade">
+    <meta name="twitter:description" content="Quer conhecer e debater o melhor da tecnologia server side? Além de confraternizar e trocar experiências sobre o dia-a-dia?">
+    <meta name="twitter:image" content="https://serversidesp.github.io/img/fb.jpg">
+    <meta name="twitter:image:alt" content="Evento Brasileiro de engenharia de software">
+    <meta name="description" content="Quer conhecer e debater o melhor da tecnologia server side? Além de confraternizar e trocar experiências sobre o dia-a-dia?">
+    <title>Evento Brasileiro de engenharia de software</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header id="header" class="transparent-navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <a class="logo" href="index.html">
+                        <img class="logo-img" src="./img/LOGO-EBES-ORIGINALL.png" alt="logo" style="margin-top: -5px; max-height: 60px;">
+                        <img class="logo-alt-img" src="./img/LOGO-EBES-CAPA.png" alt="logo" style="margin-top: -5px; max-height: 60px;">
+                    </a>
+                </div>
+                <button class="navbar-toggle">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <nav id="nav"> 
+                <ul class="main-nav nav navbar-nav navbar-right">
+                    <li class="dropdown">
+						<a href="#" class="dropdown-toggle" id="dropdownMenuButton" onclick="toggleDropdown()">Mais <span class="caret"></span></a>
+						<ul class="dropdown-menu" id="dropdownMenu">
+							<li><a href="cadorganizador.html">Cadastro de Organizador</a></li>
+							<li><a href="loginorganizador.html">Login do Organizador</a></li>
+							<li><a href="subartigo.html">Submeter Artigo ao Evento</a></li>
+							<li><a href="cadevento.html">Criar Evento</a></li>
+							<li><a href="sub.html">Submissões</a></li>
+						</ul>
+					</li>
+                </ul>
+                <ul class="main-nav nav navbar-nav navbar-right">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#schedule">Agenda</a></li>
+                    <li><a href="#speakers">Palestrantes</a></li>
+                    <li><a href="#sponsors">Patrocinadores</a></li>
+                    <li><a href="#cta">Inscrição</a></li>
+                    <li><a href="#contact">Local</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+	<!-- Home -->
+	<div id="home">
+		<!-- background image -->
+		<div class="section-bg" style="background-image:url(./img/back1.jpg)" data-stellar-background-ratio="0.5"></div>
+		<!-- /background image -->
+
+		<!-- home wrapper -->
+		<div class="home-wrapper">
+			<!-- container -->
+			<div class="container"> 
+				<!-- row -->
+				<div class="row">
+					<!-- home content -->
+					<div class="col-md-8 col-md-offset-2">
+						<div class="home-content">
+							<h1 class="text-center">
+								<img src="./img/LOGO-EBES-CAPA.png" alt="ServerSide_SP" title="LOGO-EBES" style="width: 400px; max-width: 100%;">
+							</h1>
+    							<h2 class="lead">Evento Brasileiro de Engenharia de Software 2025</h2>
+							</h1>
+							<h2 class="lead">Um evento focado em arquitetura, escalabilidade e disponibilidade</h2>
+							<h3 class="lead">20 a 25 de Março | Hotel Princesa Louçã e YouTube (canal da UEPA)							</h3>
+							<a href="#cta" class="main-btn">Garanta sua vaga</a>
+						</div>
+					</div>
+					<!-- /home content -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /home wrapper -->
+	</div>
+	<!-- /Home -->
+
+	<!-- About -->
+	<div id="about" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- section title -->
+				<div class="section-title">
+					<h3 class="title"><span>Sobre </span> <span>o </span> <span style="color: #4344EE;">Evento</span></h3>
+				</div>
+				<!-- /section title -->
+
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<!-- about content -->
+					<div class="about-content">
+						<p>O Evento Brasileiro de Engenharia de Software (EBES) é um importante encontro voltado para profissionais, acadêmicos e estudantes da área de Engenharia de Software. O evento visa promover conhecimentos, as melhores práticas e as últimas tendências do setor. Através de palestras, workshops e mesas-redondas, o EBES oferece espaço para discussão sobre temas como desenvolvimento ágil, qualidade de software, inteligência artificial, inovação tecnológica e gestão de projetos. É uma excelente oportunidade para networking e atualização profissional, além de ser um espaço para a troca de experiências.
+						</p>
+						</div>
+					<!-- /about content -->
+
+					<!-- Numbers -->
+					<div id="numbers">
+						<!-- row -->
+						<div class="row">
+							
+
+							<!-- /number -->
+
+						</div>
+						<!-- /row -->
+					</div>
+					<!-- /Numbers -->
+				</div>
+			</div>
+			<!-- row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /About -->
+
+	<!-- Event Schedule -->
+	<div id="schedule" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- section title -->
+				<div class="section-title">
+					<h3 class="title"><span style="color: #4344EE;">Agenda</span></h3>
+
+				</div>
+				<!-- /section title -->
+
+				<div class="col-md-8 col-md-offset-2">
+
+					<div class="events-wrapper">
+						<!-- event -->
+						<div class="event">
+							<div class="event-day">
+								<div>
+									<span class="day">24</span>
+									<span class="year">Março, 2025</span>
+								</div>
+							</div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 8h00 - 8h30 </p>
+								<h3 class="event-title">Credenciamento</h3>
+								<p>Pegue seu crachá e escolha um lugar. Seja bem-vindo ao EBES :)</p>
+							</div>
+						</div>
+						<!-- /event -->
+
+						<!-- event -->
+						<div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 8h30 - 09h00  </p>
+								<h3 class="event-title">Abertura do Evento</h3>
+								<p>Apresentação do tema: Desafios e oportunidades da engenharia de software na era digital
+								</p>
+								<p>Palestrante <a href=".">Prof Dr. Ednalvo Campos (PRÓ-REITOR DE GRADUAÇÃO DA UEPA)</a></p>
+							</div>
+						</div>
+						<!-- /event -->
+
+						<!-- event -->
+						<div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 9h00 - 10h00 </p>
+								<h3 class="event-title">Palestra: O futuro da engenharia de software</h3>
+								
+								<p>Palestrante <a href=".">Prof Dr. Wanderson Alexandre da Silva Quinto</a></p>
+							</div>
+						</div>
+						<!-- /event -->
+
+						<!-- event -->
+						<div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 10h00 - 10h30 </p>
+								<h3 class="event-title">   Coffee break</h3>
+								<p></p>
+							
+							</div>
+						</div>
+						<!-- /event -->
+
+						<!-- event -->
+						<div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 10h30 - 12h00</p>
+								<h3 class="event-title">  Mesa redonda: Tendências e inovações na engenharia de software"
+								</h3>
+								<p>Conferecionista<a href="."> Prof Dr. Thiago Nicolau Conte</a></p>
+								<p>Mediador<a href="."> Prof Dr. Ednalvo Campos (PRÓ-REITOR DE GRADUAÇÃO DA UEPA) 
+								</a></p>
+							</div>
+						</div>
+						<!-- /event -->
+
+						<!-- event -->
+						<div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 14h00 - 15h30</p>
+								<h3 class="event-title">Apresentação de trabalhos científicos: Engenharia de software na prática</h3>
+								<p>Alunos de <a href=".">Engenharia de Software de Concórdia</a></p>
+							</div>
+						</div>
+						<!-- /event -->
+
+						<!-- event -->
+						<div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 15h30 - 16h00: </p>
+								<h3 class="event-title">Coffee break</h3>
+							</div>
+						</div>
+						<!-- /event -->
+
+						<!-- event -->
+						<div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 16h00 - 17h30</p>
+								<h3 class="event-title">Palestra: A Inteligência Artificial no contexto universitário</h3>
+								<p>Palestrante <a href="."> Prof. Dr. Luis Miguel Dias (UNILAB)
+								</a></p>
+							</div>
+						</div>
+						<!-- /event -->
+
+						<!-- event -->
+						<div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 17h30 - 19h00</p>
+								<h3 class="event-title">   Palestra: Desafios e Oportunidades da Eng de Software na era digital</h3>
+								<p>Palestrante <a href=".">  Prof Dr. Carlos Willians Jaque Morais (UEPG) e Prof Dr Armando Hage</a></p>
+							</div>
+						</div>
+						<!-- /event -->
+					</div>
+
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /Event Schedule -->
+
+	<!-- Speakers -->
+	<div id="speakers" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- section title -->
+				<div class="section-title">
+					<h3 class="title"><span>Alguns dos nossos</span> <span style="color: #4344EE;">Palestrantes</span></h3>
+				</div>
+				<!-- section title -->
+
+				<!-- speaker -->
+				<div class="col-md-4 col-sm-6" id="Wandersonquinto">
+					<div class="speaker" data-toggle="modal" data-target="#speaker-modal-3">
+						<div class="speaker-img">
+							<img src="./img/quinto.jpeg" alt="">
+						</div>
+						<div class="speaker-body">
+							<div class="speaker-social">
+								<a href="https://github.com/juniorjbn" target="_blank"><i class="fa fa-github"></i></a>
+								<a href="https://twitter.com/juniorjbn" target="_blank"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.linkedin.com/in/juniorjbn/" target="_blank"><i class="fa fa-linkedin"></i></a>
+							</div>
+							<div class="speaker-content">
+								<h2>Dr.Wanderson Quinto</h2>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /speaker -->
+
+				<!-- speaker -->
+				<div class="col-md-4 col-sm-6"  id="martabarreiros">
+					<div class="speaker" data-toggle="modal" data-target="#speaker-modal-2">
+						<div class="speaker-img">
+							<img src="./img/marta.jpeg" alt="">
+						</div>
+						<div class="speaker-body">
+							<div class="speaker-social">
+								<a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+								<a href="https://medium.com/" target="_blank"><i class="fa fa-medium"></i></a>
+								<a href="https://www.linkedin.com/in/marta-barreiros-29b31961/" target="_blank"><i class="fa fa-linkedin"></i></a>
+							</div>
+							<div class="speaker-content">
+								<h2>Dra.Marta Barreiros</h2>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /speaker -->
+
+				<!-- speaker -->
+				<div class="col-md-4 col-sm-6" id="thiago">
+					<div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
+						<div class="speaker-img">
+							<img src="./img/thiago.jpeg" alt="">
+						</div>
+						<div class="speaker-body">
+							<div class="speaker-social">
+								<a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+								<a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.meetup.com/" target="_blank"><i class="fa fa-meetup"></i></a>
+							</div>
+							<div class="speaker-content">
+								<h2>Dr.Thiago Nicolau Conte</h2>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /speaker -->
+
+				<!-- speaker modal -->
+				<div id="speaker-modal-1" class="speaker-modal modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<button type="button" class="speaker-modal-close" data-dismiss="modal"></button>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-5">
+										<div class="speaker-modal-img">
+											<img src="./img/thiago.jpeg" alt="">
+										</div>
+									</div>
+									<div class="col-md-7">
+										<div class="speaker-modal-content">
+											<h2 class="speaker-name">Thiago Conte</h2>
+											<span class="speaker-job">- Diretor da DSPD</span>
+
+											<p>Possui formação de Doutor e Mestre em Engenharia Elétrica, na área de Computação Aplicada com ênfase em Inteligência Computacional, pelo Programa de Pós-Graduação em Engenharia Elétrica (PPGEE) da Universidade Federal do Pará (UFPA). Também possui especialização em Desenvolvimento de Sistemas Baseados em Software Livre pela Universidade da Amazônia (UNAMA) e em Docência para Educação Profissional pelo Centro Universitário SENAC. Graduado em Tecnologia em Processamento de Dados também pela UNAMA. Atualmente, desempenha as funções de docente efetivo e representante docente titular no Conselho Universitário (CONSUN) da Universidade do Estado do Pará (UEPA). Além disso, é Diretor de Serviços de Processamento de Dados (DSPD) na mesma instituição. Além disso, também participa do Grupo de Estudos e Pesquisas em Sistemas de Informação e de Conhecimento (GSIC/UEPA) e ao Laboratório de Computação Bioinspirada (LCBIO) da UFPA.</p>
+
+											<div class="speaker-website">
+												<h4>Website</h4>
+												<a href="http://jsladies.org"  target="_blank" rel="nofollow noopener">http://jsladies.org</a>
+											</div>
+
+											<div class="speaker-social">
+												<h4>Redes Sociais</h4>
+												<a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+												<a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+												<a href="https://www.meetup.com/ " target="_blank"><i class="fa fa-meetup"></i></a>
+											</div>
+
+											<div class="speaker-events">
+												<h4>Palestra</h4>
+												<div class="speaker-event">
+													<span><strong>24 de Março</strong>, 2025 10h30 - 12h00  </span>
+													<p><strong>Tendências e inovações na engenharia de software</strong></p>
+													
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /speaker modal -->
+
+				<!-- speaker modal -->
+				<div id="speaker-modal-2" class="speaker-modal modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<button type="button" class="speaker-modal-close" data-dismiss="modal"></button>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-5">
+										<div class="speaker-modal-img">
+											<img src="./img/marta.jpeg" alt="">
+										</div>
+									</div>
+									<div class="col-md-7">
+										<div class="speaker-modal-content">
+											<h2 class="speaker-name">Marta Barreiros</h2>
+											<span class="speaker-job">-  Doutora em engenharia eletrica</span>
+
+											<p>Possui graduação em Sistemas de Informação pela Faculdade de Imperatriz (2012), mestrado em Biotecnologia pela Universidade Federal do Pará (2015) e doutorado em Engenharia Elétrica pela Universidade Federal do Maranhão (2021). Tem experiência na área de Ciência da Computação, com ênfase em Sistemas de Computação, atuando principalmente nos seguintes temas: Processamento de Imagens, Bioinformática e Inteligência Artificial.
+											</p>
+											<div class="speaker-social">
+												<h4>Redes Sociais</h4>
+												<a href="https://github.com/grazibonizi" target="_blank"><i class="fa fa-github"></i></a>
+												<a href="https://medium.com/@grazibonizi" target="_blank"><i class="fa fa-medium"></i></a>
+												<a href="https://www.linkedin.com/in/graziella-bonizi-b14835a0" target="_blank"><i class="fa fa-linkedin"></i></a>
+											</div>
+
+											<div class="speaker-events">
+												<h4>Palestra</h4>
+												<div class="speaker-event">
+													<span><strong>27 de Março</strong>, 2025 14h00 - 15h30</span>
+													<p><strong>Inteligência artificial e machine learning na engenharia de software</strong></p>
+													
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /speaker modal -->
+
+				<!-- speaker modal -->
+				<div id="speaker-modal-3" class="speaker-modal modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<button type="button" class="speaker-modal-close" data-dismiss="modal"></button>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-5">
+										<div class="speaker-modal-img">
+											<img src="./img/quinto.jpeg" alt="">
+										</div>
+									</div>
+									<div class="col-md-7">
+										<div class="speaker-modal-content">
+											<h2 class="speaker-name">Wanderson Quinto</h2>
+											<span class="speaker-job">-  Diretor de Desenvolvimento Institucional</span>
+
+											<p>Possui formação de Doutor e Mestre em Engenharia Elétrica, na área de Computação Aplicada com ênfase em Inteligência Computacional, pelo Programa de Pós-Graduação em Engenharia Elétrica (PPGEE) da Universidade Federal do Pará (UFPA). Também possui especialização em Desenvolvimento de Sistemas Baseados em Software Livre pela Universidade da Amazônia (UNAMA) e em Docência para Educação Profissional pelo Centro Universitário SENAC. Graduado em Tecnologia em Processamento de Dados também pela UNAMA. Atualmente, desempenha as funções de docente efetivo e representante docente titular no Conselho Universitário (CONSUN) da Universidade do Estado do Pará (UEPA). Além disso, é Diretor de Serviços de Processamento de Dados (DSPD) na mesma instituição. Além disso, também participa do Grupo de Estudos e Pesquisas em Sistemas de Informação e de Conhecimento (GSIC/UEPA) e ao Laboratório de Computação Bioinspirada (LCBIO) da UFPA.
+											
+											</p>
+											<div class="speaker-social">
+												<h4>Redes Sociais</h4>
+												<a href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+												<a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+												<a href="https://www.linkedin.com/in/" target="_blank"><i class="fa fa-linkedin"></i></a>
+											</div>
+
+											<div class="speaker-events">
+												<h4>Palestra</h4>
+												<div class="speaker-event">
+													<span><strong>24 de Março</strong>, 2025 9h00 - 10h00</span>
+													<p><strong>O futuro da engenharia de software</strong></p>
+													
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /speaker modal -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /Speakers -->
+
+	<!-- Sponsors -->
+	<div id="sponsors" class="section">
+		<!-- container -->
+		<div class="container text-center">
+			<!-- row -->
+			<div class="row">
+				<!-- section title -->
+				<div class="section-title">
+					<h3 class="title"><span>Nossos</span> <span style="color: #4344EE;">Patrocinadores</span></h3>
+				</div>
+				<!-- /section title -->
+
+				<!-- sponsor -->
+				<div class="col-md-3 col-sm-4 col-xs-6 text-center">
+					<a href="https://www.uepa.br/pt-br" class="sponsor" target="_blank">
+						<img src="./img/eupa.png" alt="Teravoz" style="width: 200px;">
+					</a>
+				</div>
+				<!-- /sponsor -->
+
+				<!-- sponsor -->
+				<div class="col-md-3 col-sm-4 col-xs-6 text-center">
+					<a href="https://dspd.uepa.br/" class="sponsor" target="_blank">
+						<img src="./img/dspd.png" alt="Tera" style="width: 200px">
+					</a>
+				</div>
+				<!-- /sponsor -->
+ 
+				<!-- sponsor -->
+				<div class="col-md-3 col-sm-4 col-xs-6 text-center" style="padding-top: 60px;">
+					<a href="https://www.oracle.com/br/" class="sponsor" target="_blank">
+						<img src="./img/or.png" alt="Original My" style="width: 100px">
+					</a>
+				</div>
+				<!-- /sponsor -->
+
+				<!-- sponsor -->
+				<div class="col-md-3 col-sm-4 col-xs-6 text-center" style="padding-top: 6px;">
+					<a href="https://www.nvidia.com/pt-br/" class="sponsor" target="_blank">
+						<img src="./img/nvidia.png" alt="Fhinck" style="width: 200px">
+					</a>
+				</div>
+				<!-- /sponsor -->
+			</div>
+			<!-- /row -->
+
+			<!-- row -->
+			<div class="row">
+
+				<!-- sponsor -->
+				<div class="col-md-4 col-sm-4 col-xs-6 text-center" style="padding-top: 15px;">
+					<a href="https://www.inteceleri.com.br/" class="sponsor" target="_blank">
+						<img src="./img/inteceleri.png" alt="Gupy" style="width: 250px">
+					</a>
+				</div>
+				<!-- /sponsor -->
+
+				<!-- sponsor -->
+				<div class="col-md-4 col-sm-4 col-xs-6 text-center">
+					<a href="https://www.intel.com.br/content/www/br/pt/homepage.html" class="sponsor" target="_blank">
+						<img src="./img/intel.png" alt="" style="transform: scale(1.1,1.1); width: 200px">
+					</a>
+				</div>
+				<!-- /sponsor -->
+
+				<!-- sponsor -->
+				<div class="col-md-4 col-sm-4 col-xs-6 text-center" >
+					<a href="https://www.ibm.com/br-pt" class="sponsor" target="_blank">
+						<img src="./img/ibm.png" alt="" style="transform: scale(0.7,0.7); width: 300px">
+					</a>
+				</div>
+				<!-- /sponsor -->
+
+				<!-- sponsor -->
+				<!-- <div class="col-md-3 col-sm-4 col-xs-6 text-center">
+					<a href="#" class="sponsor">
+						<img src="./img/sponsor.png" alt="" style="width: 200px">
+					</a>
+				</div> -->
+				<!-- /sponsor -->
+
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /Sponsors -->
+
+	<!-- CTA -->
+<div id="cta" class="section full-height">
+    <!-- background image -->
+    <div class="section-bg" style="background-image:url(./img/background03.jpg)" data-stellar-background-ratio="0.5"></div>
+    <!-- /background image -->
+
+    <!-- cta wrapper -->
+    <div class="home-wrapper">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- cta content -->
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="cta-content text-center">
+                        <h2>Garanta Sua <span style="color: #4344EE;">Vaga!</span></h2>
+                        <p class="lead">Inscreva-se no EBES 2025 e tenha acesso a a palestras e minicursos exclusivos!</p>
+                        <form id="inscricao-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg same-width" id="nome" placeholder="Nome Completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control input-lg same-width" id="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control input-lg same-width" id="telefone" placeholder="Telefone" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg same-width" id="curso" placeholder="Curso" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg same-width" id="instituicao" placeholder="Instituição de Ensino" required>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control input-lg same-width" id="categoria" required>
+                                    <option value="" disabled selected>Selecione sua categoria</option>
+                                    <option value="professor">Professor</option>
+                                    <option value="estudante">Estudante</option>
+                                    <option value="outra">Outra</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="dropdown">
+                                    <button class="dropbtn">Selecionar Modalidades</button>
+                                    <div class="dropdown-content">
+                                        <label><input type="checkbox" value="palestra" onchange="updateDescription()"> Somente palestras (R$ 75,00)</label>
+                                        <label><input type="checkbox" value="palestra-minicursos-1" onchange="updateDescription()"> Desenvolvimento de aplicações web com frameworks modernos (R$ 35,00)</label>
+                                        <label><input type="checkbox" value="palestra-minicursos-2" onchange="updateDescription()"> Arquitetura de software orientada a microsserviços (R$ 35,00)</label>
+                                        <label><input type="checkbox" value="palestra-minicursos-3" onchange="updateDescription()"> Design de Interfaces e Experiência do Usuário (UI/UX) (R$ 35,00)</label>
+                                        <label><input type="checkbox" value="palestra-minicursos-4" onchange="updateDescription()"> DevOps: Automatizando o ciclo de vida do software (R$ 35,00)</label>
+                                        <label><input type="checkbox" value="palestra-minicursos-5" onchange="updateDescription()"> Desenvolvimento de Aplicações mobile multiplataforma com React Native (R$ 35,00)</label>
+                                        <label><input type="checkbox" value="palestra-minicursos-6" onchange="updateDescription()"> Introdução a Desenvolvimento de Jogos Digitais com Unity (R$ 35,00)</label>
+                                        <label><input type="checkbox" value="palestra-minicursos-7" onchange="updateDescription()"> Gerenciamento de Projetos de Software com Scrum (R$ 35,00)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="lead" id="valor-total">Valor Total: R$ 75,00</p>
+                            </div>
+                            <button type="submit" class="main-btn">Inscrever-se</button>
+							
+                        </form>
+                    </div>
+                </div>
+                <!-- /cta content -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /cta wrapper -->
+</div>
+<!-- /CTA -->
+
+<script>
+function updateDescription() {
+    var checkboxes = document.querySelectorAll('.dropdown-content input[type="checkbox"]');
+    var valorTotal = document.getElementById("valor-total");
+
+    var total = 75; // Valor fixo para palestras
+
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked && checkbox.value !== "palestra") {
+            total += 35; // Valor adicional para cada minicurso
+        }
+    });
+
+    valorTotal.innerHTML = "Valor Total: R$ " + total + ",00";
+}
+</script>
+
+	<!-- Contact -->
+	<div id="contact" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- section title -->
+				<div class="section-title">
+					<h3 class="title"><span>Informações do</span> <span style="color: #4344EE;">Local</span></h3>
+				</div>
+				<!-- /section title -->
+
+				<!-- contact -->
+				<div class="col-sm-12 text-center">
+					<div class="contact">
+						<h3>Endereço</h3>
+						<p>Hotel Princesa Louçã<br />Av. Pres. Vargas 882, Belém, PA, 66017-904 </p>
+					</div>
+				</div>
+				<!-- /contact -->
+			</div>
+			<!-- /row -->
+
+			<!-- row -->
+			<div class="row">
+				<!-- contact -->
+				<!-- <div class="col-md-6 col-sm-4 col-xs-6 text-center">
+						<img src="./img/campus_sao_paulo_1.jpg" style="width: 100%;" alt="">
+				</div> -->
+				<div>
+						<img src="./img/hotelp.jpg" style="width: 100%;" alt="">
+				</div>
+				<!-- /contact -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+		<!-- Map -->
+		<div id="map"></div>
+		<!-- /Map -->
+	</div>
+	<!-- /Contact -->
+
+	<!-- Footer -->
+	<footer id="footer">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<div class="">
+					  <div class="contact">
+					    <h3>Contato</h3>
+					    <a href="mailto:ebes@gmail.com">ebescontact@gmail.com</a>
+					  </div>
+					</div>
+				</div>
+
+				<!-- footer logo -->
+				<div class="col-sm-12 text-center">
+					<div class="footer-brand">
+						<a class="logo" href="index.html">
+							<img src="./img/LOGO-EBES-ORIGINALL.png" alt="ServerSide_SP" title="EBES" class="logo-img" style="max-height: 130px;">
+						</a>
+					</div>
+				</div>
+				<!-- /footer logo -->
+
+				<!-- copyright -->
+				<div class="col-sm-12 text-center">
+					<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+					<p class="copyright"> <i class="" aria-hidden="true"></i> <a href="https://" target="_blank"></a>
+				      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				 </div>
+				<!-- /copyright -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</footer>
+	<!-- /Footer -->
+
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl3VSURIQAvfWjGKLPMr5M-lYW8iLjcDc"></script>
+	<script src="js/google-map.js"></script>
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Modal de Edição do Evento 
+<div id="editarEventoModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Editar Informações do Evento</h4>
+            </div>
+            <div class="modal-body">
+                <form id="editarEventoForm">
+                    <div class="form-group">
+                        <label for="nomeEvento">Nome do Evento:</label>
+                        <input type="text" class="form-control" id="nomeEvento" value="Evento Brasileiro de Engenharia de Software 2025">
+                    </div>
+                    <div class="form-group">
+                        <label for="sessaoDiscussao">Sessão de Discussão:</label>
+                        <textarea class="form-control" id="sessaoDiscussao">Apresentação do tema: Desafios e oportunidades da engenharia de software na era digital</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="agenda">Agenda:</label>
+                        <textarea class="form-control" id="agenda">24/03/2025 - 8h00: Credenciamento</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="palestrantes">Palestrantes:</label>
+                        <textarea class="form-control" id="palestrantes">Dr. Wanderson Quinto, Dra. Marta Barreiros, Dr. Thiago Nicolau Conte</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="local">Local:</label>
+                        <input type="text" class="form-control" id="local" value="Hotel Princesa Louçã, Belém, PA">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" onclick="salvarEdicoes()">Salvar Alterações</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	function salvarEdicoes() {
+		// Obter os valores dos campos
+		var nomeEvento = document.getElementById('nomeEvento').value;
+		var sessaoDiscussao = document.getElementById('sessaoDiscussao').value;
+		var agenda = document.getElementById('agenda').value;
+		var palestrantes = document.getElementById('palestrantes').value;
+		var local = document.getElementById('local').value;
+	
+		// Atualizar as informações na página (exemplo básico)
+		document.querySelector('#home .home-content h2').innerText = nomeEvento;
+		// document.querySelector('#about .about-content p').innerText = sessaoDiscussao;
+		document.querySelector('#schedule .events-wrapper').innerHTML = agenda;
+		//document.querySelector('#speakers .section-title h3').innerText = palestrantes;
+		//document.querySelector('#contact .contact p').innerText = local;
+	
+		// Fechar o modal
+		$('#editarEventoModal').modal('hide');
+	
+		// Aqui você pode adicionar uma chamada AJAX para enviar os dados para o servidor
+		// Exemplo:
+		// $.ajax({
+		//     url: 'salvar_edicoes.php',
+		//     method: 'POST',
+		//     data: {
+		//         nomeEvento: nomeEvento,
+		//         sessaoDiscussao: sessaoDiscussao,
+		//         agenda: agenda,
+		//         palestrantes: palestrantes,
+		//         local: local
+		//     },
+		//     success: function(response) {
+		//         alert('Alterações salvas com sucesso!');
+		//     }
+		// });
+	}
+	</script>
+	<style>
+		.modal-content {
+			border-radius: 10px;
+		}
+		
+		.modal-header {
+			background-color: #4344EE;
+			color: white;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		
+		.modal-title {
+			font-weight: bold;
+		}
+		
+		.modal-body {
+			padding: 20px;
+		}
+		
+		.modal-footer {
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+		</style>
+	<!-- /Modal de Edição do Evento --> 
+	 
+	<script>
+        // Função para alternar a visibilidade do dropdown
+        function toggleDropdown() {
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            dropdownMenu.classList.toggle("show"); // Adiciona ou remove a classe "show"
+        }
+
+        // Fechar o dropdown se o usuário clicar fora dele
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-toggle')) {
+                const dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show'); // Fecha o dropdown
+                    }
+                }
+            }
+        }
+    </script>
+
+
+	
+</body>
+
+</html>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
