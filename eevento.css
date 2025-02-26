@@ -7,7 +7,7 @@
 :root {
     --primary-font: 'Poppins', sans-serif;
     --background-header-color: #000000;
-    --background-color: #D9D9D9;
+    --background-color: #ffffff;
     --white: #FFFFFF;
     --blue: #4344EE;
     --dark-gray: #4E4958;
@@ -50,6 +50,7 @@
     font-size: 2em;
 }
 
+
 .header__text {
     color: var(--blue);
     width: 20em;
@@ -63,7 +64,7 @@
 
 .form {
     flex-direction: column;
-    background-color: var(--white);
+    background-color: white;;
     border-radius: 15px;
     width: 40%;
     padding: 2em;
@@ -73,12 +74,16 @@
 }
 
 .fieldset {
-    padding-bottom: 2em;
+    padding-bottom: 5em;
 }
 
 .tittle {
     border-bottom: 1px solid var(--light-grey);
     margin-bottom: .8em;
+    
+    font-size: 1.5em; /* Aumentar o tamanho da fonte */
+    font-family:  var(--primary-font);
+    color: black; /* Definir a cor da fonte */
 }
 
 .infos, 
@@ -112,6 +117,35 @@
     border-radius: 5px; /* Arredondar os cantos */
     display: block;
     width: 70%; /* Definir a largura das caixas de texto e da caixa suspensa */
+}
+
+.camp input[type="file"] {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    color: var(--light-grey);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.camp input[type="file"]::file-selector-button {
+    font-family: 'Poppins', sans-serif;
+    color: var(--light-grey);
+    background-color: #fff;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.camp input[type="file"]:focus {
+    border-color: #4344EE;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
 }
 
 .camp textarea,
@@ -268,3 +302,32 @@ select:focus::placeholder {
         flex-direction: column;
     }
 }
+
+.camp input[type="file"] {
+    width: 69%; /* Definir a largura total */
+    padding: 0.69em; /* Aumentar o padding para tornar o campo maior */
+    border: 1px solid var(--light-grey); /* Definir a cor da borda */
+    border-radius: 6px; /* Arredondar os cantos */
+    font-size: 0.8em; /* Aumentar o tamanho da fonte */
+    font-family: 'Poppins', sans-serif; /* Usar a fonte presente no resto das telas */
+    color: var(--light-grey); /* Definir a cor da fonte */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04); /* Adicionar sombra para um efeito mais bonito */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Adicionar transição para efeitos de foco */
+    background-color: #fff; /* Cor de fundo do input */
+    
+}
+
+.camp input[type="file"]:focus {
+    border-color: #4344EE; /* Alterar a cor da borda ao focar */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Aumentar a sombra ao focar */
+    outline: none; /* Remover o outline padrão */
+}
+
+.tittle {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var( --dark-gray);
+    margin-bottom: 1em;
+}
+
+
